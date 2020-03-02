@@ -1,0 +1,46 @@
+{
+    "name": "lubusin/woo-reports",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "description": "WooCommerce Reports",
+    "homepage": "https://lubus.in",
+    "require": {
+        "composer/installers": "~1.2"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2",
+        "wp-coding-standards/wpcs": "^2.2",
+        "phpcompatibility/phpcompatibility-wp": "^2.1"
+    },
+    "keywords": [
+      "wordpress",
+      "woocommerce",
+      "reports"
+    ],
+    "support": {
+      "issues": "https://github.com/lubusIN/woo-reports/"
+      },
+      "autoload": {
+          "classmap": [
+              "includes/"
+          ],
+          "files": [
+              "includes/functions.php"
+          ]
+      },
+    "scripts": {
+      "phpcs": [
+        "phpcs -s -p ."
+      ],
+      "phpcbf": [
+        "phpcbf -p ."
+      ]
+    },
+    "extra": {
+      "scripts-description": {
+            "phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+            "phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+        }
+    }
+  }

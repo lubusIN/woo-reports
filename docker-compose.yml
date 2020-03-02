@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+
+  wordpress:
+    image: wordpress
+    ports:
+      - 9999:80
+    environment:
+      WORDPRESS_DB_PASSWORD: woo-reports
+    volumes:
+      - ./:/var/www/html/wp-content/plugins/woo-reports
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: woo-reports
