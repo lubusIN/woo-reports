@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions
+ * Orders List Table View
  *
  * @author  Ajit Bohra <ajit@lubus.in>
  * @license MIT
@@ -11,4 +11,9 @@
  * @package   WooReports
  */
 
-// Global helper functions.
+?>
+
+<div class="wrap">
+	<h1 class="wp-heading-inline">Orders</h1>
+	<?php $orders_table->display(); ?>
+</div>

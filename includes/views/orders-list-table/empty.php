@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions
+ * Orders Empty State View
  *
  * @author  Ajit Bohra <ajit@lubus.in>
  * @license MIT
@@ -11,4 +11,7 @@
  * @package   WooReports
  */
 
-// Global helper functions.
+?>
+<div class="wr-no-data">
+	<h2>No Records !</h2>
+</div>

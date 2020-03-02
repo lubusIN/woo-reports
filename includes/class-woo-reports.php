@@ -57,11 +57,37 @@ final class Woo_Reports {
 	 * @since  1.0.0
 	 */
 	private function init() {
-		// Frontend.
+		// Setup Hooks.
+		add_action( 'admin_enqueue_scripts', [ __CLASS__, 'register_assets' ] );
 
+		// Load Modules.
 		// Admin.
 		if ( is_admin() ) {
-			// TODO.
+			Orders_Report::init();
 		}
+	}
+
+	/**
+	 * Register Scripts
+	 *
+	 * @return void
+	 */
+	public static function register_assets() {
+		// Scripts.
+		wp_register_script(
+			'wooreports-script',
+			WOOREPORTS_PLUGIN_URL . 'assets/script.js',
+			[ 'jquery' ],
+			filemtime( WOOREPORTS_PLUGIN_DIR . 'assets/script.js' ),
+			true
+		);
+
+		// Styles.
+		wp_register_style(
+			'wooreports-style',
+			WOOREPORTS_PLUGIN_URL . 'assets/style.css',
+			[],
+			filemtime( WOOREPORTS_PLUGIN_DIR . 'assets/style.css' )
+		);
 	}
 }

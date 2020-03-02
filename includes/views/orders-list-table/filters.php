@@ -1,6 +1,6 @@
 <?php
 /**
- * Functions
+ * Orders Filter View
  *
  * @author  Ajit Bohra <ajit@lubus.in>
  * @license MIT
@@ -11,4 +11,6 @@
  * @package   WooReports
  */
 
-// Global helper functions.
+?>
+<div>
+</div>
